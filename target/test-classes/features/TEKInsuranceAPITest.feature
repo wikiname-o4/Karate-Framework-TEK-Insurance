@@ -20,11 +20,11 @@ Feature: My Test Feature file
   @AddPrimaryAccount
   Scenario: Add Primary Account
     * path '/api/accounts/add-primary-account'
-    * def generator = Java.type('data.DataGenerator')
-    * def email = generator.getEmail()
-    * def firstName = generator.getFirstName()
-    * def lastName = generator.getLastName()
-    * def dob = generator.getDateOfBirth()
+    * def gen = Java.type('data.DataGenerator')
+    * def email = gen.getEmail()
+    * def firstName = gen.getFirstName()
+    * def lastName = gen.getLastName()
+    * def dob = gen.getDateOfBirth()
     * request
       """
       {
