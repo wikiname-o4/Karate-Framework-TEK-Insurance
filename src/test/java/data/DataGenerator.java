@@ -42,7 +42,7 @@ public class DataGenerator {
 	public static String getDateOfBirth() {
 		Faker faker = new Faker();
 		Date date = faker.date().birthday();
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		return format.format(date);
 	}
 
