@@ -7,9 +7,10 @@ Feature: TEK Insurance API Get Service
     * def token = tokenValue.response.token
     * header Authorization = 'Bearer ' + token
     * path '/api/accounts/get-primary-account'
-    * param primaryPersonId = 5516
+    * def ppIdValue = call read('PostAccount.feature')
+    * param primaryPersonId = ppIdValue.response.id
     * method get
     * print response
     * status 200
     * def responseID = response.id
-    * match reponseID == 5516
+    * match responseID == ppIdValue.response.id

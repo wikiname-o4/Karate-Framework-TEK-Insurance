@@ -49,7 +49,6 @@ Feature: Tek Insurance API Test Feature File
     * print response
     * karate.write(response, 'createdAccount.json')
 
-
   @GetMyAccountInformation
   Scenario: Get My Test Account
     * path '/api/accounts/get-account'
@@ -58,8 +57,7 @@ Feature: Tek Insurance API Test Feature File
     * method get
     * status 200
     * print response
-    
-    
+
   @AddPhoneNumber
   Scenario: Add Account Phone
     * path '/api/accounts/add-account-phone'
@@ -87,14 +85,18 @@ Feature: Tek Insurance API Test Feature File
     * path '/api/accounts/add-account-car'
     * def accountInfo = read('file:./target/createdAccount.json')
     * param primaryPersonId = accountInfo.id
+    * def gen = Java.type('data.DataGenerator')
+    * def carMake = gen.getCarMake()
+    * def carModel = gen.getCarModel()
+    * def carLicensePlate = gen.getCarLicensePlate()
     * request
       """
       {
       "id": 0,
-      "make": "Mercedes",
-      "model": "G63 AMG",
+      "make": "#(carMake)",
+      "model": "#(carModel)",
       "year": "2023",
-      "licensePlate": "TheBook"
+      "licensePlate": "#(carLicensePlate)"
       }
       """
     * method post

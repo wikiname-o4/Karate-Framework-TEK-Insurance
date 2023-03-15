@@ -97,4 +97,19 @@ public class DataGenerator {
 		Faker faker = new Faker();
 		return faker.address().fullAddress();
 	}
+	
+	public static String getCarMake() {
+		Faker faker = new Faker();
+		return faker.vehicle().make();
+	}
+	
+	public static String getCarModel() {
+		Faker faker = new Faker();
+		return faker.vehicle().model();
+	}
+	
+	public static String getCarLicensePlate() {
+		Faker faker = new Faker();
+		return faker.vehicle().licensePlate();
+	}
 }
