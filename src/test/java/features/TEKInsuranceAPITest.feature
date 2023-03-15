@@ -24,6 +24,10 @@ Feature: Tek Insurance API Test Feature File
     * def email = gen.getEmail()
     * def firstName = gen.getFirstName()
     * def lastName = gen.getLastName()
+    * def title = gen.getTitle()
+    * def gender = gen.getGender()
+    * def maritalStatus = gen.getMaritalStatus()
+    * def employmentStatus = gen.getEmploymentStatus()
     * def dob = gen.getDateOfBirth()
     * request
       """
@@ -32,10 +36,10 @@ Feature: Tek Insurance API Test Feature File
       "email": "#(email)",
       "firstName": "#(firstName)",
       "lastName": "#(lastName)",
-      "title": "Mr.",
-      "gender": "MALE",
-      "maritalStatus": "SINGLE",
-      "employmentStatus": "The Book",
+      "title": "#(title)",
+      "gender": "#(gender)",
+      "maritalStatus": "#(maritalStatus)",
+      "employmentStatus": "#(employmentStatus)",
       "dateOfBirth": "#(dob)",
       "new": true
       }
