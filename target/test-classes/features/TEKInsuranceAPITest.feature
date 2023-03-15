@@ -1,5 +1,5 @@
 @TEKInsuranceCompleteTest
-Feature: My Test Feature file
+Feature: Tek Insurance API Test Feature File
 
   Background: 
     Given url 'https://tek-insurance-api.azurewebsites.net/'
