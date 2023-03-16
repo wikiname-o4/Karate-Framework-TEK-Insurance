@@ -2,7 +2,7 @@
 Feature: Tek Insurance API Test Feature File
 
   Background: 
-    Given url 'https://tek-insurance-api.azurewebsites.net/'
+    Given url appUrl
     * path '/api/token'
     * request { "username": "supervisor", "password": "tek_supervisor" }
     * method post

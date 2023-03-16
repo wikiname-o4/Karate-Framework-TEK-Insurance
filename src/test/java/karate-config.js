@@ -6,7 +6,7 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+    appUrl: 'https://tek-insurance-api.azurewebsites.net/'
   }
   if (env == 'dev') {
     // customize
